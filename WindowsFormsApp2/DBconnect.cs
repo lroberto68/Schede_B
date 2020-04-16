@@ -141,7 +141,8 @@ namespace WindowsFormsApp2
                     string codice = reader["codice_ecr"].ToString();
                     string desc = reader["descrizione_ecr"].ToString();
                     string logo = reader["logotipo"].ToString();
-                    Modello m = new Modello(id, codice, desc, logo);
+                    string ultimaMatr = reader["ultima_matr"].ToString();
+                    Modello m = new Modello(id, codice, desc, logo,ultimaMatr);
                     modelli.Add(m);
                 }
                 reader.Close();

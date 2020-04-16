@@ -42,6 +42,7 @@
             this.coluLOGO = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.coluASSE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.coluQTY = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.coluIND = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblConn = new System.Windows.Forms.Label();
             this.lstAss = new System.Windows.Forms.ListBox();
             this.btnCrea = new System.Windows.Forms.Button();
@@ -49,7 +50,7 @@
             this.lblAssemb = new System.Windows.Forms.Label();
             this.lblModelli = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.coluIND = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnMATRI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lstModelli
@@ -57,14 +58,15 @@
             this.lstModelli.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.coluCOD,
             this.coluDESC,
-            this.coluLOGOTIPO});
+            this.coluLOGOTIPO,
+            this.columnMATRI});
             this.lstModelli.FullRowSelect = true;
             this.lstModelli.GridLines = true;
-            this.lstModelli.Location = new System.Drawing.Point(295, 57);
-            this.lstModelli.Margin = new System.Windows.Forms.Padding(4);
+            this.lstModelli.HideSelection = false;
+            this.lstModelli.Location = new System.Drawing.Point(221, 46);
             this.lstModelli.MultiSelect = false;
             this.lstModelli.Name = "lstModelli";
-            this.lstModelli.Size = new System.Drawing.Size(546, 312);
+            this.lstModelli.Size = new System.Drawing.Size(537, 254);
             this.lstModelli.TabIndex = 0;
             this.lstModelli.UseCompatibleStateImageBehavior = false;
             this.lstModelli.View = System.Windows.Forms.View.Details;
@@ -77,7 +79,7 @@
             // coluDESC
             // 
             this.coluDESC.Text = "Descrizione";
-            this.coluDESC.Width = 260;
+            this.coluDESC.Width = 263;
             // 
             // coluLOGOTIPO
             // 
@@ -86,18 +88,16 @@
             // 
             // txtModello
             // 
-            this.txtModello.Location = new System.Drawing.Point(295, 423);
-            this.txtModello.Margin = new System.Windows.Forms.Padding(4);
+            this.txtModello.Location = new System.Drawing.Point(221, 344);
             this.txtModello.Name = "txtModello";
-            this.txtModello.Size = new System.Drawing.Size(175, 22);
+            this.txtModello.Size = new System.Drawing.Size(132, 20);
             this.txtModello.TabIndex = 1;
             // 
             // btnRicerca
             // 
-            this.btnRicerca.Location = new System.Drawing.Point(295, 478);
-            this.btnRicerca.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRicerca.Location = new System.Drawing.Point(221, 388);
             this.btnRicerca.Name = "btnRicerca";
-            this.btnRicerca.Size = new System.Drawing.Size(100, 30);
+            this.btnRicerca.Size = new System.Drawing.Size(75, 24);
             this.btnRicerca.TabIndex = 2;
             this.btnRicerca.Text = "Ricerca";
             this.btnRicerca.UseVisualStyleBackColor = true;
@@ -105,18 +105,16 @@
             // 
             // txtQty
             // 
-            this.txtQty.Location = new System.Drawing.Point(897, 244);
-            this.txtQty.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQty.Location = new System.Drawing.Point(794, 199);
             this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(132, 22);
+            this.txtQty.Size = new System.Drawing.Size(100, 20);
             this.txtQty.TabIndex = 3;
             // 
             // btnAggiungi
             // 
-            this.btnAggiungi.Location = new System.Drawing.Point(897, 314);
-            this.btnAggiungi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAggiungi.Location = new System.Drawing.Point(794, 256);
             this.btnAggiungi.Name = "btnAggiungi";
-            this.btnAggiungi.Size = new System.Drawing.Size(100, 28);
+            this.btnAggiungi.Size = new System.Drawing.Size(75, 23);
             this.btnAggiungi.TabIndex = 4;
             this.btnAggiungi.Text = "Aggiungi";
             this.btnAggiungi.UseVisualStyleBackColor = true;
@@ -134,11 +132,11 @@
             this.lstSchede.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lstSchede.FullRowSelect = true;
             this.lstSchede.GridLines = true;
-            this.lstSchede.Location = new System.Drawing.Point(882, 57);
-            this.lstSchede.Margin = new System.Windows.Forms.Padding(4);
+            this.lstSchede.HideSelection = false;
+            this.lstSchede.Location = new System.Drawing.Point(783, 47);
             this.lstSchede.MultiSelect = false;
             this.lstSchede.Name = "lstSchede";
-            this.lstSchede.Size = new System.Drawing.Size(577, 118);
+            this.lstSchede.Size = new System.Drawing.Size(434, 97);
             this.lstSchede.TabIndex = 5;
             this.lstSchede.UseCompatibleStateImageBehavior = false;
             this.lstSchede.View = System.Windows.Forms.View.Details;
@@ -167,31 +165,35 @@
             // 
             this.coluQTY.Text = "Qty";
             // 
+            // coluIND
+            // 
+            this.coluIND.Text = "Status";
+            // 
             // lblConn
             // 
             this.lblConn.AutoSize = true;
-            this.lblConn.Location = new System.Drawing.Point(1181, 578);
+            this.lblConn.Location = new System.Drawing.Point(886, 470);
+            this.lblConn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblConn.Name = "lblConn";
-            this.lblConn.Size = new System.Drawing.Size(108, 17);
+            this.lblConn.Size = new System.Drawing.Size(82, 13);
             this.lblConn.TabIndex = 6;
             this.lblConn.Text = "Stato database:";
             // 
             // lstAss
             // 
             this.lstAss.FormattingEnabled = true;
-            this.lstAss.ItemHeight = 16;
-            this.lstAss.Location = new System.Drawing.Point(40, 57);
-            this.lstAss.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lstAss.Location = new System.Drawing.Point(30, 46);
+            this.lstAss.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstAss.Name = "lstAss";
-            this.lstAss.Size = new System.Drawing.Size(224, 84);
+            this.lstAss.Size = new System.Drawing.Size(169, 69);
             this.lstAss.TabIndex = 7;
             // 
             // btnCrea
             // 
-            this.btnCrea.Location = new System.Drawing.Point(1300, 314);
-            this.btnCrea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCrea.Location = new System.Drawing.Point(1096, 256);
+            this.btnCrea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCrea.Name = "btnCrea";
-            this.btnCrea.Size = new System.Drawing.Size(88, 28);
+            this.btnCrea.Size = new System.Drawing.Size(66, 23);
             this.btnCrea.TabIndex = 8;
             this.btnCrea.Text = "Crea";
             this.btnCrea.UseVisualStyleBackColor = true;
@@ -199,9 +201,10 @@
             // 
             // btnElimina
             // 
-            this.btnElimina.Location = new System.Drawing.Point(1143, 315);
+            this.btnElimina.Location = new System.Drawing.Point(978, 257);
+            this.btnElimina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnElimina.Name = "btnElimina";
-            this.btnElimina.Size = new System.Drawing.Size(90, 27);
+            this.btnElimina.Size = new System.Drawing.Size(68, 22);
             this.btnElimina.TabIndex = 9;
             this.btnElimina.Text = "Elimina";
             this.btnElimina.UseVisualStyleBackColor = true;
@@ -210,9 +213,10 @@
             // lblAssemb
             // 
             this.lblAssemb.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAssemb.Location = new System.Drawing.Point(37, 27);
+            this.lblAssemb.Location = new System.Drawing.Point(28, 22);
+            this.lblAssemb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAssemb.Name = "lblAssemb";
-            this.lblAssemb.Size = new System.Drawing.Size(200, 17);
+            this.lblAssemb.Size = new System.Drawing.Size(150, 14);
             this.lblAssemb.TabIndex = 10;
             this.lblAssemb.Text = "Elenco ASSEMBLATORI";
             // 
@@ -223,9 +227,10 @@
             this.lblModelli.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModelli.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblModelli.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblModelli.Location = new System.Drawing.Point(295, 33);
+            this.lblModelli.Location = new System.Drawing.Point(221, 27);
+            this.lblModelli.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModelli.Name = "lblModelli";
-            this.lblModelli.Size = new System.Drawing.Size(129, 17);
+            this.lblModelli.Size = new System.Drawing.Size(104, 13);
             this.lblModelli.TabIndex = 11;
             this.lblModelli.Text = "Elenco MODELLI";
             // 
@@ -233,22 +238,23 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(882, 27);
+            this.label1.Location = new System.Drawing.Point(783, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(137, 17);
+            this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Schede da creare";
             // 
-            // coluIND
+            // columnMATRI
             // 
-            this.coluIND.Text = "Status";
+            this.columnMATRI.Text = "Ultima Matricola";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1577, 660);
+            this.ClientSize = new System.Drawing.Size(1301, 536);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblModelli);
             this.Controls.Add(this.lblAssemb);
@@ -262,7 +268,6 @@
             this.Controls.Add(this.btnRicerca);
             this.Controls.Add(this.txtModello);
             this.Controls.Add(this.lstModelli);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
@@ -296,5 +301,6 @@
         private System.Windows.Forms.Label lblModelli;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader coluIND;
+        private System.Windows.Forms.ColumnHeader columnMATRI;
     }
 }

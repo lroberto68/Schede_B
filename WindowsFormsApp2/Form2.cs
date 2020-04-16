@@ -49,7 +49,7 @@ namespace WindowsFormsApp2
             {
                 foreach (Modello m in modelli)
                 {
-                    lstModelli.Items.Add(new ListViewItem(new string[] { m.Cod, m.Decr, m.Logo }));
+                    lstModelli.Items.Add(new ListViewItem(new string[] { m.Cod, m.Decr, m.Logo,m.UltMatri }));
                 }
             }
             
